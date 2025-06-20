@@ -34,18 +34,20 @@ const Fibonacci2 = (Inicio, acumulado) => {
     }  
     console.log("Array " + Fibonacci2(Inicio, acumulado));
 
+const Fibonacci3 = (Inicio, acumulado, Fin) => {    
+    let Numero3 = new Map();
+    let Mapeo = 0;
 
-const Fibonacci3 = (Inicio, acumulado) => {    
-
-        Numero3 = new Map (Inicio,Inicio+1);
-        let Mapeo = 1;
+    while (Inicio <= Fin) {
+        Numero3.set(Mapeo, Inicio);
         let resultado3 = Inicio + acumulado;
-        if (resultado3 > Fin); 
-        Numero3.set (Mapeo, Inicio)
+
+        Inicio = acumulado;
+        acumulado = resultado3;
+        
         Mapeo++;
-        Inicio=acumulado
-        acumulado=resultado3
+    }
 
     return Numero3;
-    }  
-    console.log(Fibonacci3(Inicio, acumulado));
+};
+console.log(Fibonacci3(Inicio, acumulado, Fin));
